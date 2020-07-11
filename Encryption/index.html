@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload files</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+
+    <body>
+      
+      <h1 class="heading"> Devsoc Hackathon</h1>
+
+      <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+      <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)">
+
+      <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+            addFiles(event);">
+
+          <i class="icon"><ion-icon name="cloud-upload-outline" ></ion-icon></i>
+        <br>
+        <span id="fileLabelText">
+          Choose a file or drag it here
+        </span>
+        <br>
+        <span id="uploadStatus"></span>
+      </label>
+
+      <input type="submit" value="Upload" class="uploadButton">
+      
+      
+      
+      
+    </form>
+
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+    
+    
+<!--
+    <footer class="footer">
+         <h3 class="footer">
+           <div class="heart">
+                Made with <ion-icon name="heart-outline" ></ion-icon> by 4ambros
+            </div>
+         </h3>
+    </footer>
+-->
+
+</header>
+
+
+
+</html>

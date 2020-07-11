@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(bgimg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  /* Image stays fixed while scrolling */
+    height: 100vh;
+}
+
+.heading {
+    text-align: center ;
+    border-color: bisque;
+    padding-top: 5rem;
+    color: azure ;
+    font-size: 45px ;
+    display: block;
+    
+}
+
+
+#dropFileForm {
+  margin: 16px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#dropFileForm #fileLabel {
+    margin-top: 10%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: block;
+  padding: 55px;
+  position: relative;
+  cursor: pointer;
+}
+
+#dropFileForm #fileInput {
+  display: none;
+}
+
+#dropFileForm #fileLabel:after,
+#dropFileForm #fileLabel:before {
+    
+    
+    
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      z-index: -2;
+      border-radius: 8px 8px 0 0;
+}
+
+#dropFileForm #fileLabel:before {
+  z-index: -1;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5%,
+    black 5%,
+    black 10%
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#dropFileForm.fileHover #fileLabel:before {
+  opacity: 0.25;
+}
+
+#dropFileForm .uploadButton {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  color: #000;
+  cursor: pointer;
+}
+
+#dropFileForm.fileHover {
+  box-shadow: 0 0 16px limeGreen;
+}
+
+.footer {
+    display: block;
+    text-align: center ;
+    color: #000 ;
+    padding-top: 1px;
+    background-color: beige ;
+}
+
+/*--------------------ICONS-----------*/
+
+.heart {
+    color: red ;
+    font-size: 1.5rem
+}
+
+.icon {
+    font-size: 5rem ;
+}
+
+
